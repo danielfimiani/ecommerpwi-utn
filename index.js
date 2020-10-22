@@ -7,8 +7,9 @@ require("dotenv").config();
 
 const port = process.env.PORT || 5000;
 
+
 app.get("/", (req, res) => {
-  res.render("login");
+  res.render('main', {layout:'index'});
 });
 
 app.listen(port, () => {
