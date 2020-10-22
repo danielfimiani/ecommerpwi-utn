@@ -16,7 +16,6 @@ router.get("/registro", function (req, res) {
   res.render("registro");
 });
 
-
 //ADMIN PRODUCTOS
 router.get("/admin/productos", function (req, res) {
   res.render("productos");
@@ -25,6 +24,5 @@ router.get("/admin/productos", function (req, res) {
 router.get("/admin/compras", function (req, res) {
   res.render("compras");
 });
-
 
 module.exports = router;

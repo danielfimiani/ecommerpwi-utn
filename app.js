@@ -19,7 +19,9 @@ app.use(bodyparser.json());
 //Render Engine
 app.engine("handlebars", exphbs());
 app.set("view engine", "handlebars");
+app.use(express.static("./public/common"));
 
+//ROUTER
 app.use("/", indexRouter);
 
 require("dotenv").config();

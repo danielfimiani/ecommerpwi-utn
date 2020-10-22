@@ -2,12 +2,12 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-6 login-section-wrapper">
-                <div class="brand-wrapper">
-                    <img src="assets/images/logo.svg" alt="logo" class="logo">
+                <div class="brand-wrapper m-auto">
+                    <img src="logo.svg" alt="logo" class="logo">
                 </div>
-                <div class="login-wrapper my-auto">
+                <div class="login-wrapper m-auto">
                     <h1 class="login-title">Log in</h1>
-                    <form action="#!">
+                    <form action="/">
                         <div class="form-group">
                             <label for="email">Email</label>
                             <input type="email" name="email" id="email" class="form-control"
@@ -18,7 +18,7 @@
                             <input type="password" name="password" id="password" class="form-control"
                                 placeholder="enter your passsword">
                         </div>
-                        <input name="login" id="login" class="btn btn-block login-btn" type="button" value="Login">
+                        <input name="login" id="login" class="btn btn-block login-btn" type="submit" value="Login">
                     </form>
                     <a href="#!" class="forgot-password-link">Forgot password?</a>
                     <p class="login-wrapper-footer-text">Don't have an account? <a href="#!" class="text-reset">Register
@@ -26,13 +26,23 @@
                 </div>
             </div>
             <div class="col-sm-6 px-0 d-none d-sm-block">
-                <img src="assets/images/login.jpg" alt="login image" class="login-img">
+                <img src="https://images.unsplash.com/photo-1542840411-4275cdfe7782?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+                    alt="login image" class="login-img">
             </div>
         </div>
     </div>
 </main>
 
 <style>
+    body {
+        background-color: #fff;
+        min-height: 100vh;
+    }
+
+    main {
+        height: 100%;
+    }
+
     .brand-wrapper {
         padding-top: 7px;
         padding-bottom: 8px;
@@ -68,7 +78,7 @@
     }
 
     .login-wrapper {
-        width: 300px;
+        width: 400px;
         max-width: 100%;
         padding-top: 24px;
         padding-bottom: 24px;
