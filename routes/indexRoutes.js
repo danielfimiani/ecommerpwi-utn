@@ -3,26 +3,26 @@ const router = express.Router();
 
 //HOME
 router.get("/", function (req, res) {
-  res.render("home");
+  res.render("home", { bAgregaNavbar: true });
 });
 
 //Login
 router.get("/login", function (req, res) {
-  res.render("login");
+  res.render("login", { bAgregaNavbar: false });
 });
 
 //Registro
 router.get("/registro", function (req, res) {
-  res.render("registro");
+  res.render("registro", { bAgregaNavbar: false });
 });
 
 //ADMIN PRODUCTOS
 router.get("/admin/productos", function (req, res) {
-  res.render("productos");
+  res.render("productos", { bAgregaNavbar: true });
 });
 
 router.get("/admin/compras", function (req, res) {
-  res.render("compras");
+  res.render("compras", { bAgregaNavbar: true });
 });
 
 module.exports = router;
