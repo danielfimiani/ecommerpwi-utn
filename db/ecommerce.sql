@@ -1,7 +1,7 @@
 CREATE DATABASE ECOMMERCE;
 
 USE ECOMMERCE;
-
+-- listo
 CREATE TABLE usuarios 
 (
 	id_usuario int NOT NULL AUTO_INCREMENT ,
@@ -16,7 +16,7 @@ CREATE TABLE usuarios
     ts_update TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY(id_usuario)
 );
-
+-- listo
 CREATE TABLE categorias
 (
 	id_categoria int NOT NULL AUTO_INCREMENT ,
@@ -25,7 +25,7 @@ CREATE TABLE categorias
     ts_update TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY(id_categoria)
 );
-
+-- listo
 CREATE TABLE productos 
 (
 	id_producto int NOT NULL AUTO_INCREMENT ,
@@ -40,7 +40,7 @@ CREATE TABLE productos
     PRIMARY KEY(id_producto),
     FOREIGN KEY (id_categoria) references categorias(id_categoria)
 );
-
+-- listo
 CREATE TABLE productos_imagenes
 (
 	id_producto_imagen int NOT NULL AUTO_INCREMENT,
@@ -51,7 +51,7 @@ CREATE TABLE productos_imagenes
     PRIMARY KEY(id_producto),
     FOREIGN KEY (id_producto_imagen) references productos(id_producto)
 );
-
+-- listo
 CREATE TABLE estado_pago 
 (
 	id_estado_pago int NOT NULL AUTO_INCREMENT,
@@ -86,7 +86,7 @@ CREATE TABLE compra_producto
     FOREIGN KEY (id_producto) references productos(id_producto),
     FOREIGN KEY (id_compra) references compras(id_compra)
 );
-
+-- listo
 CREATE TABLE provincia 
 (
 	id_provincia int NOT NULL AUTO_INCREMENT,
