@@ -72,7 +72,8 @@ CREATE TABLE compras
     ts_update TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY(id_compra),
     FOREIGN KEY (id_usuario) references usuarios(id_usuario),
-    FOREIGN KEY (id_estado_pago) references estado_pago(id_estado_pago)
+    FOREIGN KEY (id_estado_pago) references estado_pago(id_estado_pago),
+    FOREIGN KEY (id_direccion_envio) references direccion_envio(id_direccion_envio)
 );
 
 CREATE TABLE compra_producto 
@@ -104,5 +105,6 @@ CREATE TABLE direccion_envio
     ts_create TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     ts_update TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (id_direccion_envio)
+    FOREIGN KEY (id_provincia) references provincia(id_provincia)
 );
 
