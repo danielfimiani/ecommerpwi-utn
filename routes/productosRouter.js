@@ -5,11 +5,8 @@ const Productos = require("../models/productos");
 const Productos_Imagenes = require("../models/productos_imagenes");
 const Categoria = require("../models/categorias");
 
-
 router.get("/productos", function (req, res) {
-  let Usuario = Usuarios.find(
-    (Usuario) => Usuario.id_usuario == req.session.userId
-  );
+  let Usuario = Usuarios.find((Usuario) => Usuario.id_usuario == req.session.userId);
   if (Usuario && Usuario.sn_admin == 1) {
     res.render("productos", {
       bAgregaNavbar: true,
@@ -24,9 +21,7 @@ router.get("/productos", function (req, res) {
 });
 
 router.get("/productos/:id_producto", function (req, res) {
-  let Usuario = Usuarios.find(
-    (Usuario) => Usuario.id_usuario == req.session.userId
-  );
+  let Usuario = Usuarios.find((Usuario) => Usuario.id_usuario == req.session.userId);
   if (Usuario && Usuario.sn_admin == 1) {
     const { id_producto } = req.params;
     let Producto = ArmaArrayProdCat(id_producto);
@@ -49,17 +44,11 @@ router.get("/productos/:id_producto", function (req, res) {
 function ArmaArrayProdCat(id_producto) {
   const ArrProdCat = [];
   let AuxArrProdCat = new ProdCat();
-  let Producto = Productos.find(
-    (Producto) => Producto.id_producto == id_producto
-  );
-  let aux_cat = Categoria.find(
-    (aux_cat) => aux_cat.id_categoria == Producto.id_categoria
-  );
-  let aux_img = Productos_Imagenes.find(
-    (aux_img) => aux_img.id_producto == Producto.id_producto
-  );
+  let Producto = Productos.find((Producto) => Producto.id_producto == id_producto);
+  let aux_cat = Categoria.find((aux_cat) => aux_cat.id_categoria == Producto.id_categoria);
+  let aux_img = Productos_Imagenes.find((aux_img) => aux_img.id_producto == Producto.id_producto);
   if (aux_cat && aux_img) {
-    AuxArrProdCat.id_producto = Producto.id_categoria;
+    AuxArrProdCat.id_producto = Producto.id_producto;
     AuxArrProdCat.txt_nombre = Producto.txt_nombre;
     AuxArrProdCat.txt_desc = Producto.txt_desc;
     AuxArrProdCat.stock = Producto.stock;

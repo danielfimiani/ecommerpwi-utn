@@ -34,7 +34,7 @@ const productos = [
     id_categoria: "4",
     txt_nombre: "kit mesa con 4 sillas",
     txt_desc:
-      "hermosa(entre comillas) mesa redonda con 4 sillas que le convinan a la perfeccion",
+      "hermosa(entre comillas) mesa redonda con 4 sillas que le combinan a la perfeccion",
     stock: "5",
     precio: 25000.0,
     sn_habilitado: "1",
@@ -45,7 +45,7 @@ const productos = [
     id_categoria: "3",
     txt_nombre: "monitor",
     txt_desc:
-      "monitor de 32 pulgadas capas de mostrar hasta el pelo de la naris del presentador de youtube",
+      "monitor de 32 pulgadas capas de mostrar hasta el pelo de la nariz del presentador de youtube",
     stock: "465",
     precio: 13000.0,
     sn_habilitado: "1",
